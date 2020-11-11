@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "110605353949",
+    "firebase_url": "https://pryzl-281004.firebaseio.com",
+    "project_id": "pryzl-281004",
+    "storage_bucket": "pryzl-281004.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110605353949:android:9a0823b4736a3833562c34",
+        "android_client_info": {
+          "package_name": "com.pryzl.pryzlmobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110605353949-3j29kkmeevm0leoco8bml8dbsf6dikiu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pryzl.pryzlmobileapp",
+            "certificate_hash": "9989040ec69e848999ee8a6b39064ad04ac2bee0"
+          }
+        },
+        {
+          "client_id": "110605353949-ihic7idn9nogvcgaehlhk0g1bl9k8v2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCXXUazxUDLl5PR7NGuBJJuHYHecStOpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110605353949-ihic7idn9nogvcgaehlhk0g1bl9k8v2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

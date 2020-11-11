@@ -1,0 +1,83 @@
+analyzer:
+  errors:
+    invalid_assignment: error
+    missing_return: error
+    dead_code: error
+
+
+# A full list of rules and documentation can be found here https://dart-lang.github.io/linter/lints/.
+linter:
+  rules:
+    - sort_pub_dependencies # pub dependencies must be sorted to keep good track of our pubspec file.
+    - void_checks # Don't assign to void.
+    - use_to_and_as_if_applicable # Start the name of the method with to/_to or as/_as if applicable.
+    - use_setters_to_change_properties # Use a setter for operations that conceptually change a property - we shouldn't access these properties without proper flow.
+    - unnecessary_this # Don't access members with this unless avoiding shadowing.
+    - unnecessary_string_escapes # Remove unnecessary backslashes in strings - for better readability.
+    - unnecessary_raw_strings # Unnecessary raw string - raw strings should only be used when extremely important.
+    - unnecessary_parenthesis # Remove unnecessary parenthesis - for better readability.
+    - unnecessary_overrides # Don't override a method to do a super method invocation with the same parameters - only override when there's a meaningfull reason or if implementing a hashcode.
+    - unnecessary_null_aware_assignments # Avoid null in null-aware assignment - remove redundancy.
+    - unnecessary_new # Unnecessary new keyword should be omitted - better readability.
+    - unnecessary_lambdas # Don't create a lambda when a tear-off will do - not everyone understands lambda functions.
+    - unnecessary_final # Don't use final for local variables.
+    - sort_unnamed_constructors_first # In case of unnamed constructors - they should be on the top..
+    - slash_for_doc_comments # Prefer a /// for documentation - leave // for disabling lint rules or logic comments.
+    - provide_deprecation_message # If @deprecated is used explain why in a message using the message field.
+    - prefer_null_aware_operators # Null aware operators preferred - let's us handle unexpected behavior.
+    - prefer_is_empty # If overriding isEmpty / isNotEmpty - isEmpty is preferred as it avoid double negation (usually confuses humans).
+    - prefer_int_literals # Prefer int literals instead of double where necessary.
+    - prefer_if_null_operators # Prefer using if null operators - more behavior control.
+    - prefer_foreach # Use forEach to only apply a function to all the elements - more understandable in case of simple logic.
+    - prefer_final_fields # Private field could be final - especially if immutable.
+    - prefer_const_constructors_in_immutables # Immutables shouldn't change values - use const keyword whenever possible.
+    - prefer_asserts_with_message # Asserts with messages are preferred - makes it easier to trace failures/errors.
+    - prefer_single_quotes # Prefer single quotes to double quotes for strings, unless a double quote is necessary.
+    - package_api_docs # Package APIs should be documented with reason of use and extra information.
+    - only_throw_errors # Only throw instances of classes extending either Exception or Error.
+    - one_member_abstracts # Avoid defining a one-member abstract class when a simple function will do - improve readability and usability.
+    - null_closures # Do not pass null as an argument where a closure is expected - control application behavior.
+    - non_constant_identifier_names # Name non-constant identifiers using lowerCamelCase - we generally follow lowerCaseCamel.
+    - lines_longer_than_80_chars # Lines longer than 80 characters should be avoided - you can disable this if necessary.
+    - leading_newlines_in_multiline_strings # new lines in multiline strings - improves readability.
+    - flutter_style_todos # Follow flutter style TODOS.
+    - empty_constructor_bodies # Use ; instead of {} for empty constructor bodies.
+    - empty_catches # Avoid empty catch blocks - if we catch an exception we should do something with it.
+    - constant_identifier_names # Prefer using lowerCamelCase for constant names - also in general.
+    - avoid_void_async # Avoid async functions that return void. Async means a function always returns a value but void is not a value.
+    - avoid_unused_constructor_parameters # Avoid unused constructor parameter - improve readability.
+    - avoid_setters_without_getters # If a setter is defined, so should be a getter and vice versa.
+    - avoid_returning_null_for_void # Null != void. Avoid returning null for void.
+    - avoid_returning_null # Avoid returning null in general - specify special cases with unique values.
+    - avoid_return_types_on_setters # Avoid return types on setters - add a property to the class to check for any class states.
+    - avoid_null_checks_in_equality_operators # Null checks should be preformed in equality operators.
+    - avoid_init_to_null # Don't explicitly initialize variables to null - improve readability.
+    - annotate_overrides # Annotate overridden members - explicitly explain why the behavior of the override is different/needed.
+    - always_declare_return_types # Declare method return types - developers need to understand what they'll be getting from the function they're calling.
+    - valid_regexps # Only valid regex expressions - doesn't make sense to have broken expressions.
+    - unrelated_type_equality_checks # Equality operator == invocation with references of unrelated types.
+    - unnecessary_statements # No unnecessary statements - improve readability.
+    - throw_in_finally # The finally block executes code irrespective of an exception's occurrence so we shouldn't throw exceptions there - either remove the exception or the finally.
+    - test_types_in_equals # Test type arguments in operator ==(Object other) - we should save unnecessary comparisons if the type is not what we expect.
+    - hash_and_equals # Always override hashCode if overriding ==.
+    - empty_statements # Avoid empty statements.
+    - invariant_booleans # Conditions should not unconditionally evaluate to true or to false otherwise there's no need for them.
+    - close_sinks # Closing instances of Sink prevents memory leaks and unexpected behavior.
+    - cancel_subscriptions # Cancelling instances of StreamSubscription prevents memory leaks and unexpected behavior.
+    - avoid_empty_else # Empty else statements, we shouldn't use an else statement if it does nothing - improves readability.
+    - camel_case_types # Enforce camel case types.
+    - omit_local_variable_types # Omit type annotations for local variables.
+    - prefer_interpolation_to_compose_strings # Prefer using interpolation instead of concatenation to compose strings and values.
+    - prefer_adjacent_string_concatenation # Use adjacent strings to concatenate string literals.
+    - unnecessary_brace_in_string_interps # Avoid using braces in interpolation when not needed.
+    - prefer_collection_literals # Use collection literals.
+    - prefer_is_not_empty # Prefer x.isNotEmpty to !x.isEmpty for Iterable and Map instances.
+    - unnecessary_getters_setters # Avoid wrapping fields in getters and setters just to be "safe".
+    - prefer_initializing_formals # Use initializing formals when possible.
+    - type_init_formals # Don't type annotate initializing formals.
+    - unnecessary_const # Avoid repeating const keyword in a const context.
+    - library_names # Name libraries using lowercase_with_underscores.
+    - file_names # Name source files using lowercase_with_underscores.
+    - library_prefixes # Use lowercase_with_underscores when specifying a library prefix.
+    - directives_ordering # DO place “dart:” imports before imports, specify exports in a separate section after all imports, sort sections alphabetically.
+    - curly_braces_in_flow_control_structures # Use curly braces for all flow control structures.
